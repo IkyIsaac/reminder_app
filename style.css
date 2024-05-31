@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: url(pexels-goumbik-574070.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Quicksand, Sans-serif;
+}
+/* .reminder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsla(0, 0%, 83%, 0.757);
+    max-width: 50%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    right: 50%;
+} */
+
+/* For the reminder body */
+.container{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 1px 20px 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px lightslategray;
+    backdrop-filter: blur(10px);
+}
+button,label,input{
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+input{
+    width: 100%;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th{
+    background-color: green;
+    color: white;
+}
+button{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: rgb(27, 98, 27);
+}
+
+#schedule{
+    width: 100%;
+}
+
+/* For the Header */
+nav{
+    background-color: #ffffff;
+    box-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.658);
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 60px; 
+}
+
+nav a{
+    display: flex;
+    height: 100%;
+    padding: 0 30px; 
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    align-items: center;
+}
+
+nav a:hover{
+    background-color: lightgray;
+}
+
+li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    /* position */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: 100vh;
+    /* color */
+    background-color: #ffffff15;
+    backdrop-filter: blur(10px);
+    /* display */
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 100;
+}
+.sidebar li{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+#menuBar{
+    display: none;
+}
+
+/* for  menu's mobile responsiveness */
+@media( max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    #menuBar{
+        display: flex;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reminder</title>
+</head>
+<body>
+    <nav >
+        <ul class="sidebar">
+            <li onclick=hideSideBar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+    <nav>
+        <ul>
+            <li><a href="#" >Pic4ty</a></li>
+            <li class="hideOnMobile"><a href="#" >Blog</a></li>
+            <li class="hideOnMobile"><a href="#" >Tasks</a></li>
+            <li class="hideOnMobile"><a href="#" >Contact</a></li>
+            <li class="hideOnMobile"><a href="#" >About</a></li>
+            <li class="hideOnMobile"><a href="#" >Login</a></li>            
+            <li onclick=showSideBar() id="menuBar"><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>   
+        </ul>
+    </nav>
+    <div class="container">
+        <h3 style="text-align: center; padding: auto;">REMINDER APPLICATION</h3>
+        <div>
+            <form action="">
+                <label for="">Title:</label>
+                <input type="text" id="title">
+                <label for="">Description :</label>
+                <input type="text" id="description">
+                <label for="">Date :</label>
+                <input type="date" id="date">
+                <label for="">Time :</label>
+                <input type="time" id="time">
+
+                <button id="schedule" onclick="scheduleReminder()">Schedule Reminder</button>
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Date & Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reminderTableBody"></tbody>
+                </table>
+
+            </form>
+        </div>
+        <audio src="" id="notificationSound"></audio>
+    </div>
+    <script>
+        function showSideBar(){
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSideBar(){
+            const sidebar=document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
+
+
+        if('Notification' in window){
+            Notification.requestPermission().then(function(permission){
+                if(Notification.permission!==granted')
+            })
+        }
+    </script>
+</body>
+</html>
