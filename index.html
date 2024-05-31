@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Reminder</title>
 </head>
 <body>
@@ -59,15 +59,8 @@
         </div>
         <audio src="" id="notificationSound"></audio>
     </div>
+    <script src="main.js"></script>
     <script>
-        function showSideBar(){
-            const sidebar=document.querySelector('.sidebar')
-            sidebar.style.display='flex'
-        }
-        function hideSideBar(){
-            const sidebar=document.querySelector('.sidebar')
-            sidebar.style.display='none'
-        }
 
 
         if('Notification' in window){
